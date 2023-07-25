@@ -1,0 +1,13 @@
+git clone -b 15.0 https://github.com/odoo/odoo.git odoo15
+8050
+8051
+/var/log/nginx/odoo15/access.log;
+nginx conf file 
+edit service file 
+edit conf file 
+make group and user
+pg_hba <<
+snap install certbot --classic
+ssl certificate for domain
+certbot --nginx -d odoo15.salah.com 
+netstat -nltpu  << ports that are open 

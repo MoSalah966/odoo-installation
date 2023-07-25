@@ -1,0 +1,58 @@
+cd /etc/odoo/
+cp odoo16.conf odoonew.conf
+cat odoonew.conf  #to make sure it copy the content 
+vim odoonew.conf
+
+
+[options]
+; This is the password that allows database operations:
+admin_passwd = 4YdMGpdxhXKL5j8C
+db_host = False
+db_port = False
+db_user = odoo16
+db_password = Z2R1s7wl5AMTchDi
+addons_path = /opt/odoo16/odoo16/addons
+logfile = /var/log/odoo/odoo16.log
+
+#need to change port if exist 
+#now create the service file for odoo instance 
+cd /etc/systemd/system/
+cp odoo16.service odoonew 
+vim odoo16.service
+
+[Unit]
+Description=Odoo16
+Requires=postgresql.service
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+SyslogIdentifier=odoo16
+PermissionsStartOnly=true
+User=odoo16
+Group=odoo16
+ExecStart= /opt/odoo16/odoo16/odoo-bin -c /etc/odoo/odoo16.conf
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target
+
+vim odoonew
+#edit user and configfile path 
+vim odoonew 
+#change desc 
+systemctl daemon-reload
+systemctl stop odoo.service
+vim odoonew 
+#change desc 
+systemctl start odoo.service
+
+su postgres
+createuser --createdb --username postgres --no-createrole --no-superuser --pwprompt odoo15
+vim /etc/odoonew.conf 
+db_user=odoo15 
+db_port=5432
+db_host=#web path to host 
+db_password=odoo
+systemctl stop odoo.service
+systemctl start odoo.service

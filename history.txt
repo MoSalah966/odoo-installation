@@ -1,0 +1,256 @@
+1  vim intinalization.sh
+    2  chmod +x intinalization.sh
+    3  ./intinalization.sh
+    4  sudo apt install git python3-pip build-essential wget python3-dev python3-venv python3-wheel libfreetype6-dev libxml2-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less libjpeg-dev zlib1g-dev libpq-dev libxslt1-dev libldb-dev libldap2-dev libtirpc-dev
+    5  sudo useradd -m -d /opt/odoo16 -U -r -s /bin/bash odoo16
+    6  cd /opt/odoo16
+    7  ll
+    8  sudo apt install postgresql
+    9  sudo su - postgres -c "createuser -s odoo16"
+   10  wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
+   11  sudo apt install ./wkhtmltox_0.12.5-1.bionic_amd64.deb
+   12  sudo su - odoo
+   13  sudo su - odoo16
+   14  vim /etc/systemd/system/odoo.service
+   15  vim /etc/systemd/system/odoo16.service
+   16  ll
+   17  vim /etc/systemd/system/odoo16.service
+   18  sudo systemctl enable odoo
+   19  sudo systemctl enable odoo16
+   20  sudo systemctl start odoo
+   21  sudo systemctl start odoo16
+   22  sudo systemctl status odoo
+   23  sudo systemctl status odoo16
+   24  sudo apt-get install -y npm
+   25  sudo apt install -f
+   26  vim /etc/odoo/odoo16.conf
+   27  sudo mkdir /var/log/odoo
+   28  sudo chown odoo16:root /var/log/odoo
+   29  sudo systemctl start odoo16.service
+   30  sudo systemctl status odoo16.service
+   31  su -s /bin/bash odoo16
+   32  vim /etc/systemd/system/odoo16.service
+   33  sudo systemctl start odoo16.service
+   34  systemctl daemon-reload
+   35  sudo systemctl start odoo16.service
+   36  sudo systemctl status odoo16.service
+   37  netsatus -nltpu
+   38  netstat -nltpu
+   39  apt install net-tools
+   40  netstat -nltpu
+   41  vim /etc/nginx/conf.d/odoo16.conf
+   42  nginx -t
+   43  mkdir /var/log/nginx/odoo16
+   44  nginx -t
+   45  nginx -s reload
+   46  vim /etc/odoo/odoo16.conf
+   47  systemctl restart odoo16
+   48  systemctl statusodoo16
+   49  systemctl status odoo16
+   50  su - postgres
+   51  sudo mkdir /etc/odoo
+   52  vim /etc/odoo/odoo16.conf
+   53  su - postgres
+   54  cd /home/dahab-masr-version-2/
+   55  ls
+   56  exit
+   57  ll
+   58  cd ..
+   59  ll
+   60  cd ..
+   61  ll
+   62  ssh -i debitinquiry.pem ubuntu@52.6.61.8
+   63  ssh -i debitinquiry.pem root@52.6.61.8
+   64  ll
+   65  ssh -i debitinquiry.pem root@52.6.61.8
+   66  vim ~/.ssh/authorized_keys
+   67  sudo su
+   68  cd /etc/nginx/conf.d/
+   69  ll
+   70  vim odoo16.conf
+   71  nginx -t
+   72  nginx -s reload
+   73  vim odoo16.conf
+   74  nginx -t
+   75  vim odoo16.conf
+   76  nginx -t
+   77  find /etc/ -name "odoo.server"
+   78  find / -name "odoo.server"
+   79  find /etc/ -name "odoo.server"
+   80  exit
+   81  grep -r "odoo.server" ~/
+   82  grep -r "odoo.server" /
+   83  cd /sbin/
+   84  ls
+   85  cd /bin/
+   86  ls
+   87  cd /etc/
+   88  vim odoo/odoo16.conf
+   89  cd /opt/odoo16/
+   90  ls
+   91  vim odoo16/
+   92  cd odoo16/
+   93  ls
+   94  cd odoo/
+   95  ls
+   96  vim __init__.py
+   97  cd service/
+   98  ls
+   99  cd ../../..
+  100  cd /etc/systemd/
+  101  ls'
+  102  ls
+  103  vim system.conf
+  104  cd system/
+  105  ls
+  106  vim odoo16.service
+  107  vim /opt/odoo16/odoo16/odoo-bin
+  108  vim /opt/odoo16/odoo16/setup.cfg
+  109  systemctl status odoo16.service
+  110  cd /opt
+  111  ll
+  112  wget https://download.odoocdn.com/download/15e/deb?payload=MTY4OTg0NzQ0NC4xNWUuZGViLmRNTWplc1l0WEVBZEF5ZFJxbHk2UWdxbkFhVEZGdGsxa2xKNVcxREdqem89
+  113  ll
+  114  mv deb\?payload\=MTY4OTg0NzQ0NC4xNWUuZGViLmRNTWplc1l0WEVBZEF5ZFJxbHk2UWdxbkFhVEZGdGsxa2xKNVcxREdqem89 odoo15_enterprise.tar.gz
+  115  ll
+  116  tar -xzvf odoo15_enterprise.tar.gz
+  117  rm odoo15_enterprise.tar.gz
+  118  ll
+  119  wget https://download.odoocdn.com/download/15e/src?payload=MTY4OTg0Nzc4NS4xNWUuc3JjLnZkMlp0dnFaRXJMdkROWHhmRWJHNGRRbHhlWDJyamxXdjNWQ3NuSEptSlU9
+  120  ll
+  121  mv src\?payload\=MTY4OTg0Nzc4NS4xNWUuc3JjLnZkMlp0dnFaRXJMdkROWHhmRWJHNGRRbHhlWDJyamxXdjNWQ3NuSEptSlU9 odoo15_enterprise.tar.gz
+  122  ll
+  123  tar -xzvf odoo15_enterprise.tar.gz
+  124  ll
+  125  mkdir odoo15/
+  126  ls
+  127  ll
+  128  rm -r odoo15/
+  129  ll
+  130  git clone -b 15.0 https://github.com/odoo/odoo.git odoo15
+  131  cd /etc/nginx/conf.d/
+  132  ll
+  133  cp odoo16.conf odoo15.conf
+  134  ll
+  135  vim odoo15.conf
+  136  nginx -t
+  137  su - postgres
+  138  vim /etc/postgresql/12/main/pg_hba.conf
+  139  vim /etc/odoo/odoo15.conf
+  140  cd /opt/
+  141  ll
+  142  cd odoo16/
+  143  ll
+  144  cd ../odoo15/
+  145  ll
+  146  vim /etc/odoo/odoo15.conf
+  147  ip
+  148  ip a
+  149  systemctl start odoo15.service
+  150  systemctl status odoo15.service
+  151  su -s /bin/bash odoo15
+  152  vim /etc/systemd/system/odoo15.service
+  153  systemctl daemon-reload
+  154  systemctl start odoo15.service
+  155  systemctl status odoo15.service
+  156  su -s /bin/bash odoo15
+  157  apt-get install python3-pypdf2
+  158  systemctl start odoo15.service
+  159  systemctl status odoo15.service
+  160  apt-get install python3-werkzeug
+  161  systemctl start odoo15.service
+  162  systemctl status odoo15.service
+  163  apt-get install python3-pil
+  164  systemctl start odoo15.service
+  165  systemctl status odoo15.service
+  166  apt-get install python3-reportlab
+  167  systemctl start odoo15.service
+  168  systemctl status odoo15.service
+  169  apt-get install python3-babel
+  170  systemctl start odoo15.service
+  171  systemctl status odoo15.service
+  172  apt-get install python3-passlib
+  173  systemctl start odoo15.service
+  174  systemctl status odoo15.service
+  175  apt-get install python3-lxml
+  176  systemctl start odoo15.service
+  177  apt-get install python3-lxml
+  178  systemctl status odoo15.service
+  179  apt-get install python3-decorator
+  180  systemctl start odoo15.service
+  181  systemctl status odoo15.service
+  182  apt-get install python3-polib
+  183  systemctl start odoo15.service
+  184  systemctl status odoo15.service
+  185  apt-get install python3-psycopg2
+  186  systemctl start odoo15.service
+  187  systemctl status odoo15.service
+  188  pip install -r requirements.txt    << for all dependencies 
+  189  systemctl start odoo15.service
+  190  systemctl status odoo15.service
+  191  su -s /bin/bash odoo15
+  192  systemctl start odoo15.service
+  193  systemctl status odoo15.service
+  194  vim /etc/odoo/odoo15.conf
+  195  systemctl start odoo15.service
+  196  systemctl status odoo15.service
+  197  systemctl start odoo15.service
+  198  ll
+  199  cd /
+  200  systemctl status odoo15.service
+  201  vim /etc/systemd/system/odoo15.service
+  202  vim /etc/odoo/odoo16.conf
+  203  netstat -nltpu
+  204  systemctl restart odoo15.service
+  205  systemctl status odoo15.service
+  206  netstat -nltpu
+  207  cd /etc/nginx/conf.d/
+  208  ll
+  209  mv odoo16.conf odoo16.conf.back
+  210  nginx -s reload
+  211  mv odoo16.conf.back odoo16.conf
+  212  mv odoo15.conf odoo15.conf.back
+  213  nginx -s reload
+  214  vim odoo15.conf.back
+  215  apt install snap
+  216  snap install certbot --classic
+  217  cd /etc/nginx/conf.d/
+  218  ll
+  219  nginx -t
+  220  vim odoo15.conf
+  221  nginx -t
+  222  mkdir /var/log/nginx/odoo15
+  223  nginx -t
+  224  vim odoo15.conf
+  225  cd /etc/
+  226  ll
+  227  cd odoo/
+  228  ll
+  229  cp odoo16.conf odoo15.conf
+  230  vim odoo15.conf
+  231  cd /etc/systemd/system/
+  232  cp odoo16.service odoo15.service
+  233  vim odoo15.service
+  234  groupadd odoo15
+  235  cd /opt/
+  236  ll
+  237  sudo useradd -m -d /opt/odoo15 -U -r -s /bin/bash odoo15
+  238  groupdel odoo15
+  239  sudo useradd -m -d /opt/odoo15 -U -r -s /bin/bash odoo15
+  240  ll
+  241  su -s /bin/bash odoo15
+  242  mv odoo-15.0+e.20230720 enterprise
+  243  ll
+  244  git clone -b 15.0 https://github.com/odoo/odoo.git odoo15
+  245  rm -rf odoo15
+  246  git clone -b 15.0 https://github.com/odoo/odoo.git odoo15
+  247  ll
+  248  mv enterprise odoo15/
+  249  ll
+  250  chmod odoo15:odoo15 odoo15
+  251  chown -R odoo15:odoo15 odoo15
+  252  cd odoo15
+  253  ll
+  254  cd /opt/
+  255  ll
+  256  cd odoo15/
